@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form class="form" data-form>
+      <fieldset class="form__fieldset">
+        <legend class="visually-hidden">Test form</legend>
+
+        <div class="form__row">
+          <label class="form__label" for="firstName">First name*</label>
+          <div class="form__block" data-form-block>
+            <input class="form__input" data-input-field type="text" name="firstName" id="firstName" required aria-required="true" title="Please type in your first name with no numbers" pattern="^[a-zA-Z \-']+$" placeholder="John" data-patter="text"/>
+            <div class="form__validation" data-form-validation></div>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="lastName">Last name*</label>
+          <div class="form__block" data-form-block>
+            <input class="form__input" data-input-field type="text" name="lastName" id="lastName" required aria-required="true" title="Please type in your last name with no numbers" pattern="^[a-zA-Z \-']+$" placeholder="Smith"/>
+            <div class="form__validation" data-form-validation></div>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="dateOfBirth">Date of birth* (dd/mm/yyyy)</label>
+          <div class="form__block" data-form-block>
+            <input class="form__input" data-input-field type="text" name="dateOfBirth" id="dateOfBirth" required aria-required="true" title="Please type in your last name with no numbers" pattern="^((0[1-9])|([1-2][0-9])|3[0-1])\/((0[1-9])|(1[0-2]))\/[0-9]{4}$" placeholder="DD/MM/YYYY"/>
+            <div class="form__validation" data-form-validation></div>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="mobileNumber">Mobile number</label>
+          <div class="form__block" data-form-block>
+            <input class="form__input" data-input-field type="text" name="mobileNumber" id="mobileNumber" title="This field is not required"/>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="countryOfOrigin">Country of origin</label>
+          <div class="form__block" data-form-block>
+            <select class="form__input" data-input-field name="countryOfOrigin" id="countryOfOrigin" title="This field is not required">
+              <option value="0" selected="selected" >Australia</option>
+              <option value="1">Brazil</option>
+              <option value="2">Columbia</option>
+              <option value="3">Denmark</option>
+              <option value="4">Estonia</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <label class="form__label">Gender</label>
+          <div class="form__block" data-form-radio-block>
+
+            <div class="form__row">
+              <input class="form__radio" type="radio" name="gender" id="gender_male" value="M" required aria-required="true" title="Please select a gender"/>
+              <label class="form__labelGender" for="gender_male"><ins class="form__radioBtn" data-form-radio-gender></ins> Male</label>
+            </div>
+
+            <div class="form__row">
+              <input class="form__radio" type="radio" name="gender" id="gender_female" value="F" required aria-required="true" title="Please select a gender"/>
+              <label class="form__labelGender" for="gender_female"><ins class="form__radioBtn" data-form-radio-gender></ins> Female</label>
+            </div>
+
+            <div class="form__row">
+              <input class="form__radio" type="radio" name="gender" id="gender_other" value="O" required aria-required="true" title="Please select a gender"/>
+              <label class="form__labelGender" for="gender_other"><ins class="form__radioBtn" data-form-radio-gender></ins> Other</label>
+            </div>
+
+            <div class="form__row">
+              <input class="form__radio" type="radio" name="gender" id="gender_prefernottosay" value="P" required aria-required="true" title="Please select a gender"/>
+              <label class="form__labelGender" for="gender_prefernottosay"><ins class="form__radioBtn" data-form-radio-gender></ins> Prefer not to say</label>
+            </div>
+
+            <div class="form__validation" data-form-radio-validation="gender"></div>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="addressLineOne">Address line 1*</label>
+          <div class="form__block" data-form-block>
+            <input class="form__input" data-input-field type="text" name="addressLineOne" id="addressLineOne" required aria-required="true" title="Please type in address line one" placeholder="1 Redmond Road"/>
+            <div class="form__validation" data-form-validation></div>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="addressLineTwo">Address line 2</label>
+          <div class="form__block" data-form-block>
+            <input class="form__input" data-input-field type="text" name="addressLineTwo" id="addressLineTwo" title="This field is not required"/>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="townCity">Town/City*</label>
+          <div class="form__block" data-form-block>
+            <input class="form__input" data-input-field type="text" name="townCity" id="townCity" required aria-required="true" title="Please type in your town/city" placeholder="Manchester"/>
+            <div class="form__validation" data-form-validation></div>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="county">County</label>
+          <div class="form__block" data-form-block>
+            <input class="form__input" data-input-field type="text" name="county" id="county" title="This field is not required"/>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <label class="form__label" for="postcode">Postcode*</label>
+          <div class="form__block" data-form-block>
+            <input class="form__input" data-input-field type="text" name="postcode" id="postcode" required aria-required="true" title="Please type in your postcode" pattern="^(([gG][iI][rR] {0,}0[aA]{2})|((([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y]?[0-9][0-9]?)|(([a-pr-uwyzA-PR-UWYZ][0-9][a-hjkstuwA-HJKSTUW])|([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y][0-9][abehmnprv-yABEHMNPRV-Y]))) {0,}[0-9][abd-hjlnp-uw-zABD-HJLNP-UW-Z]{2}))$" placeholder="M45 7EQ"/>
+            <div class="form__validation" data-form-validation></div>
+          </div>
+        </div>
+
+      </fieldset>
+
+      <input class="form__button" type="submit" name="formSubmit" id="formSubmit" value="submit" data-form-submit/>
+    </form>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
